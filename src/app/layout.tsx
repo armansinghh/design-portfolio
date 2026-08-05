@@ -3,7 +3,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Arman Singh — Motion & Design",
-  description: "Motion graphics, visual design. After Effects & Photoshop.",
+  description: "Motion graphics and visual design. After Effects, Premiere Pro & Photoshop.",
+  openGraph: {
+    title: "Arman Singh — Motion & Design",
+    description: "Motion graphics and visual design.",
+    url: "https://design.armansingh.me",
+    siteName: "Arman Singh",
+  },
 };
 
 export default function RootLayout({
@@ -13,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        </body>
     </html>
   );
 }

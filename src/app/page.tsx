@@ -1,9 +1,7 @@
 export default function Home() {
   return (
-    <main>
-      <section id="hero" style={{ height: "100vh" }}>
-        {/* Hero goes here */}
-      </section>
+    <main className="min-h-screen w-full bg-draft-grid flex items-center justify-center">
+      
     </main>
   );
 }
