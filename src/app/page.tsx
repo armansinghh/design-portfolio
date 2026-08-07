@@ -1,7 +1,9 @@
+import { Hero } from "@/components/Hero";
+
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-draft-grid flex items-center justify-center">
-      
+    <main className="w-full bg-draft-grid">
+      <Hero />
     </main>
   );
 }
