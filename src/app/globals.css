@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bytesized&family=Erica+One&display=swap');
 @import "tailwindcss";
 
+/* custom fonts */
+.font-erica { font-family: 'Erica One', sans-serif; }
+.font-bytesized { font-family: 'Bytesized', sans-serif; }
+.font-bungee { font-family: 'Bungee', cursive; }
+
+:root{
+  --color-primary: #f5efd6;
+  --color-background: #080808;
+}
+
 body {
-  background-color: #101010;
-  color: #e5e5e5;
+  background-color: var(--color-background);
+  color: var(--color-primary);
 }
 
 .bg-draft-grid {
@@ -17,4 +28,9 @@ body {
   linear-gradient(to right, rgba(255, 255, 255, 0.02) 2px, transparent 2px),
   /* horizontal grid */
   linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 2px, transparent 2px);
+}
+
+.hover-effect:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
