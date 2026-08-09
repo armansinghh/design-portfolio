@@ -1,5 +1,6 @@
 import { Hero } from "@/components/hero/Hero";
 import { About } from "@/components/about/About";
+import { Marquee } from "@/components/shared/Marquee";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="bg-light-grid bg-(--color-primary)">
         <About />
       </div>
+      < Marquee />
     </main>
   );
 }

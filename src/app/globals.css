@@ -16,6 +16,20 @@ body {
   color: var(--color-primary);
 }
 
+/* for marquee animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: scroll 15s linear infinite;
+}
+
 .bg-dark-grid {
   /* size for grain, then grid x, then grid y */
   background-size: 200px 200px, 20px 20px, 20px 20px;
