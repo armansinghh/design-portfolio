@@ -1,9 +1,9 @@
-import { Leaves } from "./Leaves";
+// import { Leaves } from "./Leaves";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      <Leaves />
+      {/* <Leaves /> */}
 
       {/* 
         MAIN WRAPPER 
@@ -49,7 +49,7 @@ export function Hero() {
           </span>
         </div>
 
-        <div className="absolute -bottom-2 -right-12 bg-red-600 text-(--color-primary) px-3 py-1 font-bytesized text-sm uppercase tracking-widest rotate-3 shadow-lg z-20 hover-effect">
+        <div className="absolute -bottom-2 -right-12 bg-[#b72b2b] text-(--color-primary) px-3 py-1 font-bytesized text-sm uppercase tracking-widest rotate-3 shadow-lg z-20 hover-effect">
           created by arman
         </div>
         
