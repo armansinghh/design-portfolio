@@ -11,6 +11,7 @@ export function About() {
   return (
     <section
       ref={sectionRef}
+      id="about"
       className="relative min-h-screen w-full text-[#161616] overflow-hidden flex flex-col items-center justify-center py-20 px-6 md:px-16"
     >
       <ScrollSnake containerRef={sectionRef} />
