@@ -33,7 +33,7 @@ export function Hero() {
           hefy
         </h1>
 
-        <div className="absolute -top-16 -left-26 z-20 flex items-center justify-center -rotate-6 hover-effect">
+        <div className="absolute -top-16 -left-26 z-20 flex items-center justify-center spin-box">
           <svg
             viewBox="0 0 100 100"
             className="w-48 text-yellow-400"

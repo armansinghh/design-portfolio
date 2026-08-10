@@ -69,3 +69,11 @@ body {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
+
+.spin-box {
+  transition: transform 0.6s ease-out;
+}
+
+.spin-box:hover {
+  transform: rotate(90deg);
+}
