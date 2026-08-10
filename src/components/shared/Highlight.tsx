@@ -20,8 +20,8 @@ export function Highlight({
 
   return (
     <span className="relative inline-block whitespace-nowrap mx-0.5 px-0.5">
-      <span className={`absolute inset-0 ${colorMap[color]} ${tilt} -z-10`}></span>
-      <span className="relative z-10">{children}</span>
+      <span className={`absolute inset-0 ${colorMap[color]} ${tilt}`}></span>
+      <span className="relative text-[#161616]">{children}</span>
     </span>
   );
 }
