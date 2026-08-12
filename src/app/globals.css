@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bytesized&family=Erica+One&display=swap');
+
 @font-face {
   font-family: 'MyCustomFont';
   src: url('/assets/projects/typography/Boxy-Regular.otf') format('opentype');
@@ -6,16 +7,26 @@
   font-style: normal;
   font-display: swap;
 }
+
 @import "tailwindcss";
 
 /* custom fonts */
-.font-erica { font-family: 'Erica One', sans-serif; }
-.font-bytesized { font-family: 'Bytesized', sans-serif; }
-.font-bungee { font-family: 'Bungee', cursive; }
+.font-erica {
+  font-family: 'Erica One', sans-serif;
+}
 
-:root{
-  --color-primary: #f5efd6;
+.font-bytesized {
+  font-family: 'Bytesized', sans-serif;
+}
+
+.font-bungee {
+  font-family: 'Bungee', cursive;
+}
+
+:root {
+  --color-primary: #fbf8ec;
   --color-background: #080808;
+  --color-background-faded: #222222;
 }
 
 html {
@@ -39,6 +50,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -51,34 +63,38 @@ body {
 .bg-dark-grid {
   /* size for grain, then grid x, then grid y */
   background-size: 200px 200px, 20px 20px, 20px 20px;
-  background-image: 
-    
-  /* grain */
-  url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E"),
-    
-  /* vertical grid */
-  linear-gradient(to right, rgba(255, 255, 255, 0.02) 2px, transparent 2px),
-  /* horizontal grid */
-  linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 2px, transparent 2px);
+  background-image:
+
+    /* grain */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E"),
+
+    /* vertical grid */
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 2px, transparent 2px),
+    /* horizontal grid */
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 2px, transparent 2px);
 }
 
 .bg-light-grid {
   background-size: 200px 200px, 20px 20px, 20px 20px;
-  background-image: 
+  background-image:
 
-  url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E"),
-    
-  linear-gradient(to right, rgba(22, 22, 22, 0.05) 2px, transparent 2px),
-  linear-gradient(to bottom, rgba(22, 22, 22, 0.05) 2px, transparent 2px);
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E"),
+
+    linear-gradient(to right, rgba(22, 22, 22, 0.05) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(22, 22, 22, 0.05) 2px, transparent 2px);
+}
+
+.hover-effect {
+  /* custom bezier curve for realistic spring physics btw */
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .hover-effect:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
+  transform: scale(1.12) rotate(-3deg);
 }
 
 .spin-box {
-  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .spin-box:hover {

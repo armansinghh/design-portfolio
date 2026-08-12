@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 // import { Leaves } from "./Leaves";
 
 export function Hero() {
@@ -9,12 +12,11 @@ export function Hero() {
         MAIN WRAPPER 
         we use scale to shrink the entire locked composition for smaller screens (will adjust values later)
       */}
-      <div className="relative flex flex-col items-center select-none z-10 origin-center scale-[0.45] sm:scale-[0.6] md:scale-75 lg:scale-90 xl:scale-100">
-        
+      <div className="relative -translate-y-4 flex flex-col items-center select-none z-10 origin-center scale-[0.45] sm:scale-[0.6] md:scale-75 lg:scale-90 xl:scale-100">
         {/* horizontal lines */}
-        <div className="absolute top-8 -left-12 -right-12 border-t border-dashed border-white/20"></div>
-        <div className="absolute bottom-4 -left-12 -right-20 border-t border-dashed border-white/20"></div>
-        <div className="absolute -bottom-3 -left-12 -right-20 border-t border-dashed border-white/20"></div>
+        <div className="absolute top-8 -left-12 -right-14 border-t border-dashed border-white/20"></div>
+        <div className="absolute bottom-4 -left-12 -right-14 border-t border-dashed border-white/20"></div>
+        <div className="absolute -bottom-3 -left-12 -right-14 border-t border-dashed border-white/20"></div>
         <div className="absolute -bottom-12 left-34 right-34 border-t border-dashed border-white/20"></div>
 
         {/* vertical lines */}
@@ -52,8 +54,103 @@ export function Hero() {
         <div className="absolute -bottom-2 -right-12 bg-[#b72b2b] text-(--color-primary) px-3 py-1 font-bytesized text-sm uppercase tracking-widest rotate-3 shadow-lg z-20 hover-effect">
           created by arman
         </div>
-        
       </div>
+
+      {/* reminder to scroll :) */}
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              delayChildren: 1,
+              staggerChildren: 0.1,
+            },
+          },
+        }}
+        className="absolute bottom-8 w-full flex items-center justify-between px-8 md:px-16 z-30 text-(--color-primary)/50 font-sans uppercase"
+      >
+        <motion.span
+          className="text-2xl"
+          variants={{
+            hidden: { scale: 0, rotate: -180, opacity: 0 },
+            visible: {
+              scale: 1,
+              rotate: 0,
+              opacity: 1,
+              transition: { duration: 0.5, ease: "easeOut" },
+            },
+          }}
+        >
+          +
+        </motion.span>
+
+        <motion.span
+          className="text-2xl hidden sm:block"
+          variants={{
+            hidden: { scale: 0, rotate: -180, opacity: 0 },
+            visible: {
+              scale: 1,
+              rotate: 0,
+              opacity: 1,
+              transition: { duration: 0.5, ease: "easeOut" },
+            },
+          }}
+        >
+          +
+        </motion.span>
+
+        <div className="text-sm tracking-wider flex gap-2">
+          {["SCROLL", "TO", "EXPLORE"].map((word, i) => (
+            <motion.span
+              key={i}
+              variants={{
+                hidden: { scale: 0.7, opacity: 0 },
+                visible: {
+                  scale: 1,
+                  opacity: 1,
+                  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                },
+              }}
+              className="inline-block"
+            >
+              {word}
+            </motion.span>
+          ))}
+        </div>
+
+        <motion.span
+          className="text-2xl hidden sm:block"
+          variants={{
+            hidden: { scale: 0, rotate: -180, opacity: 0 },
+            visible: {
+              scale: 1,
+              rotate: 0,
+              opacity: 1,
+              transition: { duration: 0.5, ease: "easeOut" },
+            },
+          }}
+        >
+          +
+        </motion.span>
+
+        <motion.span
+          className="text-2xl"
+          variants={{
+            hidden: { scale: 0, rotate: -180, opacity: 0 },
+            visible: {
+              scale: 1,
+              rotate: 0,
+              opacity: 1,
+              transition: { duration: 0.5, ease: "easeOut" },
+            },
+          }}
+        >
+          +
+        </motion.span>
+      </motion.div>
     </section>
   );
 }

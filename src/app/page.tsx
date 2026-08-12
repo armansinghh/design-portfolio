@@ -9,23 +9,29 @@ import { Footer } from "@/components/footer/Footer";
 
 export default function Home() {
   return (
-    <main className="w-full">
+    <main className="w-full relative">
       <CustomScrollbar />
       {/* <FloatingNav /> */}
-      <div className="bg-dark-grid bg-(--color-background)">
+
+      <div className="sticky top-0 w-full h-screen bg-dark-grid bg-(--color-background) z-0">
         <Hero />
       </div>
-      <div className="bg-light-grid bg-(--color-primary)">
+      <div className="relative z-20 bg-(--color-background-faded) shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
+        <Marquee />
+      </div>
+      <div className="relative bg-light-grid bg-(--color-primary) z-20">
         <About />
       </div>
-      <Marquee />
-      <div className="bg-dark-grid bg-(--color-background)">
+      <div className="relative z-20 bg-(--color-background-faded)">
+        <Marquee />
+      </div>
+      <div className="relative bg-dark-grid bg-(--color-background) z-20">
         <Projects />
       </div>
-      <div className="bg-light-grid bg-(--color-primary)">
+      <div className="relative bg-light-grid bg-(--color-primary) z-20">
         <Contact />
       </div>
-      <div className="bg-dark-grid bg-(--color-background)">
+      <div className="relative bg-dark-grid bg-(--color-background) z-20">
         <Footer />
       </div>
     </main>
