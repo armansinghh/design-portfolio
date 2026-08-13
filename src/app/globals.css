@@ -100,3 +100,10 @@ body {
 .spin-box:hover {
   transform: rotate(45deg);
 }
+
+.teeth-strip {
+  background-image:
+    repeating-linear-gradient(45deg, #e2c140 0 4px, #161616 4px 8px),
+    repeating-linear-gradient(-45deg, #e2c140 0 4px, #161616 4px 8px);
+  background-blend-mode: multiply;
+}
