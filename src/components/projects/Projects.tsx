@@ -6,7 +6,7 @@ import { SocietyWork } from "./SocietyWork";
 
 export function Projects() {
   return (
-    <section id="projects" className="relative w-full py-32 px-6 md:px-16 text-[#f0f0f0] overflow-hidden z-10">
+    <section id="projects" className="relative w-full text-[#f0f0f0] overflow-hidden z-10 py-20 px-6 md:px-16">
       <div className="max-w-7xl mx-auto flex flex-col gap-24">
         <div className="flex flex-col items-center text-center gap-6 mb-10">
           <h2 className="font-erica text-7xl md:text-8xl text-[#b72b2b] -rotate-2 drop-shadow-sm">

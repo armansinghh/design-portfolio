@@ -15,7 +15,7 @@ export function About() {
       className="relative min-h-screen w-full text-[#161616] overflow-hidden flex flex-col items-center justify-center py-20 px-6 md:px-16"
     >
       <ScrollSnake containerRef={sectionRef} />
-      <div className="relative w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center z-10">
+      <div className="relative w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-12 lg:gap-20 z-10">
         {/* left side */}
         <div className="relative w-full flex flex-col justify-center">
           <AboutText />

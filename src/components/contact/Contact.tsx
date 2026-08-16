@@ -56,7 +56,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative w-full py-12 min-[660px]:py-20 md:py-32 px-5 sm:px-6 md:px-16 lg:px-24 text-[#161616] overflow-x-hidden z-10 border-t border-[#161616]/10"
+      className="relative w-full text-[#161616] overflow-x-hidden z-10 border-t border-[#161616]/10 py-20 px-6 md:px-16"
     >
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="mb-6 min-[660px]:mb-12 flex flex-col items-start">
