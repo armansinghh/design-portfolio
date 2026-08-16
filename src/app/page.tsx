@@ -1,5 +1,5 @@
 import { CustomScrollbar } from "@/components/shared/Scrollbar";
-// import { FloatingNav } from "@/components/shared/FloatingNav";
+import { FloatingNav } from "@/components/shared/FloatingNav";
 import { Hero } from "@/components/hero/Hero";
 import { About } from "@/components/about/About";
 import { Projects } from "@/components/projects/Projects";
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="w-full relative">
       <CustomScrollbar />
-      {/* <FloatingNav /> */}
+      <FloatingNav />
 
       <div className="sticky top-0 w-full h-screen bg-dark-grid bg-(--color-background) z-0">
         <Hero />
