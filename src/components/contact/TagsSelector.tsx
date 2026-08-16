@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { BentoCard } from "./BentoCard";
 
 const TAGS = ["...1", "...2", "...3", "...4", "Other"];
 
-export function TagsSelector() {
-  const [activeTag, setActiveTag] = useState("...1");
+interface TagsSelectorProps {
+  activeTag: string;
+  onChange: (tag: string) => void;
+}
 
+export function TagsSelector({ activeTag, onChange }: TagsSelectorProps) {
   return (
     <BentoCard
       span="col-span-1 md:col-span-2"
@@ -26,7 +28,7 @@ export function TagsSelector() {
             <button
               key={tag}
               type="button"
-              onClick={() => setActiveTag(tag)}
+              onClick={() => onChange(tag)}
               className={`relative px-4 py-2 min-[660px]:px-5 min-[660px]:py-2.5 rounded-lg text-xs min-[660px]:text-sm tracking-wide transition-colors duration-200 z-10 active:scale-95 ${
                 isActive
                   ? "text-[#f0f0f0]"
