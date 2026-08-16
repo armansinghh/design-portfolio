@@ -97,9 +97,9 @@ export function FloatingNav() {
       }
     : {
         hidden: {
-          y: 40,
+          y: 50,
           opacity: 0,
-          rotate: -6,
+          rotate: -3,
           transition: { duration: 0.25, ease: [0.7, 0, 0.84, 1] },
         },
         visible: {
@@ -117,7 +117,7 @@ export function FloatingNav() {
       }
     : {
         hidden: {
-          y: 40,
+          y: 60,
           opacity: 0,
           rotate: 6,
           transition: { duration: 0.25, ease: [0.7, 0, 0.84, 1] },
@@ -133,7 +133,7 @@ export function FloatingNav() {
   return (
     <div
       ref={navRef}
-      className="fixed top-5 right-5 min-[660px]:top-8 min-[660px]:right-8 z-50 flex flex-col items-end gap-3 w-[calc(100%-2.5rem)] min-[660px]:w-90"
+      className="fixed top-5 right-5 min-[660px]:top-8 min-[660px]:right-8 z-50 flex flex-col items-end gap-3 w-[calc(100%-2.5rem)] min-[660px]:w-90 pointer-events-none"
     >
       <motion.div
         variants={navContainerVariants}
