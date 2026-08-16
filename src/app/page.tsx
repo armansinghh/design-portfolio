@@ -38,7 +38,7 @@ export default function Home() {
         <Contact />
       </div>
 
-      <div className="relative bg-dark-grid bg-(--color-background) z-20">
+      <div className="relative bg-[#161616] z-20">
         <Footer />
       </div>
     </main>
