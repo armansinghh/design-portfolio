@@ -1,6 +1,15 @@
 import { SectionHeading } from "./SectionHeading";
 
 export function Posters() {
+  const posterIds = [
+    "1_zxqbhr",
+    "2_kx5rfx",
+    "3_m2gstk",
+    "4_peqep2",
+    "5_ur7zjr",
+    "6_zq2ttb",
+  ];
+
   return (
     <div className="flex flex-col gap-8">
       <SectionHeading 
@@ -14,14 +23,14 @@ export function Posters() {
       
       {/* grid */}
       <div className="w-full columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
-        {[1, 2, 3, 4, 5, 6].map((num) => (
+        {posterIds.map((id, index) => (
           <div 
-            key={num} 
+            key={id} 
             className="relative group overflow-hidden rounded-xl break-inside-avoid bg-white/5 border border-white/10"
           >
             <img
-              src={`/assets/projects/posters/${num}.png`}
-              alt={`Poster Design ${num}`}
+              src={`https://res.cloudinary.com/dpwepeiok/image/upload/f_auto,q_auto/${id}.png`}
+              alt={`Poster Design ${index + 1}`}
               className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:opacity-80"
               loading="lazy"
             />
