@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SmoothScroll } from "@/components/shared/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Arman Singh — Motion & Design",
-  description: "Motion graphics and visual design. After Effects, Premiere Pro & Photoshop.",
+  description:
+    "Motion graphics and visual design. After Effects, Premiere Pro & Photoshop.",
   openGraph: {
     title: "Arman Singh — Motion & Design",
     description: "Motion graphics and visual design.",
@@ -20,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
-        </body>
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }
