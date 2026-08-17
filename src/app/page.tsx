@@ -7,6 +7,7 @@ import { Contact } from "@/components/contact/Contact";
 import { Footer } from "@/components/footer/Footer";
 import { Marquee } from "@/components/shared/Marquee";
 import { ZipperDivider } from "@/components/shared/ZipperDivider";
+import { VibratingGrid } from "@/components/shared/VibratingGrid";
 
 export default function Home() {
   return (
@@ -14,7 +15,12 @@ export default function Home() {
       <CustomScrollbar />
       <FloatingNav />
 
-      <div className="sticky top-0 w-full h-screen bg-dark-grid bg-(--color-background) z-0">
+      <div className="sticky top-0 w-full h-screen bg-(--color-background) z-0">
+        <div className="absolute inset-0 bg-dark-grid lg:hidden pointer-events-none" />
+        <div className="hidden lg:block">
+          <VibratingGrid />
+        </div>
+
         <Hero />
       </div>
 
