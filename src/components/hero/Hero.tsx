@@ -1,16 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-// import { Leaves } from "./Leaves";
+import { Hero3D } from "./Hero3D";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* <Leaves /> */}
-
+      <Hero3D />
       {/* 
         MAIN WRAPPER 
-        we use scale to shrink the entire locked composition for smaller screens (will adjust values later)
+        we use scale to shrink the entire locked composition for smaller screens
       */}
       <div className="relative -translate-y-4 flex flex-col items-center select-none z-10 origin-center scale-[0.45] sm:scale-[0.6] md:scale-75 lg:scale-90 xl:scale-100">
         {/* horizontal lines */}
