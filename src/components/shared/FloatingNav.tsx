@@ -60,7 +60,7 @@ export function FloatingNav() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 1,
+        delayChildren: 5,
         staggerChildren: reduceMotion ? 0.1 : 0.3,
       },
     },

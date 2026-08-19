@@ -45,7 +45,7 @@ export function Hero() {
         </div>
 
         <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-20">
-          <span className="font-sans text-(--color-primary) text-sm tracking-widest whitespace-nowrap opacity-55">
+          <span className="font-elms text-(--color-primary) text-sm tracking-widest whitespace-nowrap opacity-55">
             .ae & .ps
           </span>
         </div>
@@ -64,12 +64,12 @@ export function Hero() {
           visible: {
             opacity: 1,
             transition: {
-              delayChildren: 1,
+              delayChildren: 5,
               staggerChildren: 0.1,
             },
           },
         }}
-        className="absolute bottom-8 w-full flex items-center justify-between px-8 md:px-16 z-30 text-(--color-primary)/50 font-sans uppercase"
+        className="absolute bottom-8 w-full flex items-center justify-between px-8 md:px-16 z-30 text-(--color-primary)/50 font-elms font-normal uppercase"
       >
         <motion.span
           className="text-2xl"
