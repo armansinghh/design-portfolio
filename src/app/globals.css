@@ -1,27 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bytesized&family=Erica+One&display=swap');
-
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('/assets/projects/typography/Boxy-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&family=Elms+Sans:wght@100..900&family=Erica+One&display=swap');
 @import "tailwindcss";
 
 /* custom fonts */
 .font-erica {
-  font-family: 'Erica One', sans-serif;
+  font-family: "Erica One", sans-serif;
 }
 
 .font-bytesized {
-  font-family: 'Bytesized', sans-serif;
+  font-family: "Bytesized", sans-serif;
 }
 
-.font-bungee {
-  font-family: 'Bungee', cursive;
+.font-elms {
+  font-family: "Elms Sans", sans-serif;
 }
+
 
 :root {
   --color-primary: #fbf8ec;
