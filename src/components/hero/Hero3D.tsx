@@ -125,7 +125,7 @@ function InfiniteTesseract() {
         transparent={true}
         transmission={0.3}
         opacity={1}
-        roughness={0.2}
+        roughness={0.01}
         metalness={0.85}
         ior={1.5}
         thickness={2}
@@ -141,10 +141,10 @@ export function Hero3D() {
     <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,#0a0a0a_100%)]">
       <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
         <EffectComposer enableNormalPass={false}>
-          <Bloom luminanceThreshold={0.5} mipmapBlur intensity={1.5} />
+          <Bloom luminanceThreshold={0.3} mipmapBlur intensity={3} />
         </EffectComposer>
 
-        <Environment preset="city" />
+        <Environment files="/assets/three-drei/potsdamer_platz_1k.hdr" />
         <fog attach="fog" args={["#050505", 5, 60]} />
 
         <ambientLight intensity={0.4} />
