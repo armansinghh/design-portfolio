@@ -2,6 +2,14 @@
 @import "tailwindcss";
 
 /* custom fonts */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/assets/projects/typography/Boxy-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .font-erica {
   font-family: "Erica One", sans-serif;
 }
