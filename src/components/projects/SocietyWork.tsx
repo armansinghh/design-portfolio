@@ -3,19 +3,54 @@
 import { useRef } from "react";
 import { SectionHeading } from "./SectionHeading";
 
-// will replace later
 const FEATURED_CLIPS = [
-  { src: "/assets/society/clip-1.mp4" },
-  { src: "/assets/society/clip-2.mp4" },
-  { src: "/assets/society/clip-3.mp4" },
+  {
+    src: "https://res.cloudinary.com/dpwepeiok/video/upload/v1787411197/VID_20260822_114749_434_cfio1o.mp4",
+    orientation: "portrait",
+  },
+  {
+    src: "https://res.cloudinary.com/dpwepeiok/video/upload/v1787411229/VID_20260822_112633_765_kfborc.mp4",
+    orientation: "portrait",
+  },
+  {
+    src: "https://res.cloudinary.com/dpwepeiok/video/upload/v1787411230/VID_20260822_112747_970_cfw3v5.mp4",
+    orientation: "portrait",
+  },
+  {
+    src: "https://res.cloudinary.com/dpwepeiok/video/upload/v1787379909/VID_20260822_112956_612_agltmh.mp4",
+    orientation: "landscape",
+  },
 ];
 
-// here too
 const MORE_REELS = [
-  { title: "orientation day recap", href: "https://instagram.com/reel/REPLACE_ME_1" },
-  { title: "hackathon promo", href: "https://instagram.com/reel/REPLACE_ME_2" },
-  { title: "workshop announcement", href: "https://instagram.com/reel/REPLACE_ME_3" },
-  { title: "fest highlights", href: "https://instagram.com/reel/REPLACE_ME_4" },
+  {
+    title: "event (geekfusion) after edit",
+    href: "https://www.instagram.com/reel/DWWlcX2Ck1p/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "event (geekfusion) loading vid",
+    href: "https://www.instagram.com/reel/DVoksTqgQn-/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "event (geekfusion) loading vid",
+    href: "https://www.instagram.com/reel/DVfG7bnij8M/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "event (tracethebug) announcement vid",
+    href: "https://www.instagram.com/reel/DTmf-_vCmO_/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "new leads intro vid",
+    href: "https://www.instagram.com/reel/DRkBUwPiqH1/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "gfg connect promo",
+    href: "https://www.instagram.com/reel/DRXKz3gjDiK/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+  },
+  {
+    title: "our member team party after edit",
+    href: "https://www.instagram.com/reel/DXzEG1jCJR7/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+  },
 ];
 
 export function SocietyWork() {
@@ -43,13 +78,17 @@ export function SocietyWork() {
       />
 
       {/* featured */}
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-4">
         {FEATURED_CLIPS.map((clip, i) => (
           <div
             key={clip.src}
             onMouseEnter={() => handleEnter(i)}
             onMouseLeave={() => handleLeave(i)}
-            className="group relative w-full aspect-9/16 rounded-xl overflow-hidden border border-white/10 bg-white/5"
+            className={`group relative w-full rounded-xl overflow-hidden border border-white/10 bg-white/5 ${
+              clip.orientation === "landscape"
+                ? "col-span-1 sm:col-span-3 aspect-video"
+                : "aspect-9/16"
+            }`}
           >
             <video
               ref={(el) => {
@@ -87,9 +126,9 @@ export function SocietyWork() {
           more from gfg mits
         </span>
         <div className="w-full flex flex-col border-t border-white/10">
-          {MORE_REELS.map((reel) => (
-            
-            <a  key={reel.href}
+          {MORE_REELS.map((reel, i) => (
+            <a
+              key={`${reel.href}-${i}`}
               href={reel.href}
               target="_blank"
               rel="noopener noreferrer"
