@@ -65,7 +65,7 @@ export function Contact() {
           </h2>
 
           <p className="font-sans text-base min-[660px]:text-lg md:text-xl:pl-0 text-[#161616]/60 max-w-lg mt-3 min-[660px]:mt-4 font-medium pl-0 md:pl-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            got a project, a weird idea, or just wanna say hi? drop a message below.
           </p>
         </div>
 
