@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { AboutText } from "./AboutText";
-import { ProfileCards } from "./ProfileCards";
+import { ProfileCardOne, ProfileCardTwo } from "./ProfileCards";
 import { SkillsExperience } from "./SkillsExperience";
 import { ScrollSnake } from "./ScrollSnake";
 
@@ -28,8 +28,20 @@ export function About() {
             alt="Background Mat"
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 object-cover shadow-xl -rotate-2 z-0"
           />
-          <div className="relative z-10 w-full flex justify-center md:justify-end">
-            <ProfileCards />
+
+          <div className="relative z-10 w-full max-w-lg flex flex-col gap-4 justify-center md:justify-end">
+            <img
+              src="/assets/about/sticker-2.webp"
+              alt="Sticker"
+              className="absolute -top-2 -left-6 w-25 h-25 z-10 rotate-6"
+            />
+            <ProfileCardOne />
+            <img
+              src="/assets/about/sticker-1.webp"
+              alt="Sticker"
+              className="absolute bottom-38 -right-12 w-30 h-30 z-10"
+            />
+            <ProfileCardTwo />
           </div>
         </div>
       </div>
