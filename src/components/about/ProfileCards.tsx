@@ -1,5 +1,63 @@
 import { FiMail, FiInstagram, FiGlobe } from "react-icons/fi";
 
+export function ProfileCardOne() {
+  return (
+    <div className="relative w-full bg-[#fdfaf0] rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#161616]/5 -rotate-1 flex gap-5 md:gap-6 overflow-hidden">
+      {/* Corner crosshairs */}
+      <span className="absolute top-4 left-4 text-[#161616]/20 text-xs font-mono">
+        +
+      </span>
+      <span className="absolute bottom-4 right-4 text-[#161616]/20 text-xs font-mono">
+        +
+      </span>
+
+      {/* photo slot */}
+      <div className="relative w-32 md:w-40 aspect-3/4 bg-[#161616]/5 rounded-xl shrink-0 overflow-hidden border border-[#161616]/10">
+        <img
+          src="/assets/about/profile.jpg"
+          alt="Arman"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
+
+      {/* info side */}
+      <div className="flex-1 flex flex-col min-w-0 py-2 justify-center">
+        <h4 className="font-erica text-4xl md:text-5xl leading-none text-[#161616]">
+          arman
+        </h4>
+
+        <span className="text-sm font-medium text-[#161616]/50 mt-2">
+          aka hefy
+        </span>
+
+        <div className="w-full border-t border-dashed border-[#161616]/20 my-5" />
+
+        <div className="flex flex-col gap-4 text-xs">
+          <div>
+            <span className="block font-bytesized text-[9px] uppercase tracking-widest text-[#b72b2b] mb-1">
+              education
+            </span>
+            <span className="font-bold text-[#161616]/80 text-sm">
+              B.Tech AI & Data Science
+              <span className="block text-[#161616]/50 font-medium text-xs mt-0.5">
+                @ MITS Gwl
+              </span>
+            </span>
+          </div>
+          <div>
+            <span className="block font-bytesized text-[9px] uppercase tracking-widest text-[#b72b2b] mb-1">
+              focus
+            </span>
+            <span className="font-bold text-[#161616]/80 text-sm">
+              ML, DS & designing
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function ProfileCardTwo() {
   const contacts = [
     {
