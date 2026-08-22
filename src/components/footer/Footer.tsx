@@ -2,24 +2,31 @@ export function Footer() {
   const socials = [
     {
       name: "Behance",
-      href: "#",
+      href: "https://www.behance.net/hefy",
       hoverClass:
         "hover:bg-[#e2c140] hover:border-[#e2c140] hover:text-[#161616] hover:shadow-[4px_4px_0_#a68c27]",
       tilt: "-rotate-1",
     },
     {
       name: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/in/armansinghh",
       hoverClass:
         "hover:bg-[#c4f022] hover:border-[#c4f022] hover:text-[#161616] hover:shadow-[4px_4px_0_#8cae14]",
       tilt: "rotate-1",
     },
     {
-      name: "Instagram",
-      href: "#",
+      name: "@hefy.ae",
+      href: "https://instagram.com/hefy.ae",
       hoverClass:
         "hover:bg-[#b72b2b] hover:border-[#b72b2b] hover:text-[#f0f0f0] hover:shadow-[4px_4px_0_#751919]",
       tilt: "-rotate-1",
+    },
+    {
+      name: "@hefy.ps",
+      href: "https://instagram.com/hefy.ps",
+      hoverClass:
+        "hover:bg-[#b72b2b] hover:border-[#b72b2b] hover:text-[#f0f0f0] hover:shadow-[4px_4px_0_#751919]",
+      tilt: "rotate-1",
     },
   ];
 
@@ -40,7 +47,7 @@ export function Footer() {
             </span>
             <div className="flex flex-col gap-3">
               {navLinks.map((link) => (
-                <a
+                <a 
                   key={link.name}
                   href={link.href}
                   className="font-black text-2xl md:text-3xl uppercase tracking-tighter text-[#f0f0f0]/70 hover:text-[#e2c140] transition-all w-fit hover:-translate-x-2 duration-150 ease-out flex items-center gap-3 group"
@@ -63,6 +70,8 @@ export function Footer() {
                 <a
                   key={social.name}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`font-bytesized font-bold text-xs uppercase tracking-widest px-5 py-3
                               bg-[#161616] text-[#f0f0f0]/70 
                               border-2 border-[#333] shadow-[3px_3px_0_#333]
@@ -102,8 +111,8 @@ export function Footer() {
             © {new Date().getFullYear()} Arman Singh. All rights reserved.
           </p>
 
-          <a
-            href="#"
+          
+          <a href="#"
             className="font-bytesized text-[10px] md:text-xs uppercase tracking-widest text-[#161616] bg-[#f0f0f0] px-5 py-3 border-2 border-[#161616] shadow-[4px_4px_0_#333] flex items-center gap-2 hover:bg-[#e2c140] hover:-translate-y-1 hover:-translate-x-0.5 hover:shadow-[5px_5px_0_#e2c140] active:translate-y-1 active:translate-x-1 active:shadow-none transition-all group"
           >
             Back to top
