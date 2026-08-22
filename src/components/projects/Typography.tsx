@@ -7,7 +7,7 @@ export function Typography() {
         id="category-font"
         title="typography"
         subtitle="custom typeface design"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="a display font built from scratch"
         shapeFill="text-[#b72b2b]" 
         shapeType="sparkle"
       />
@@ -16,7 +16,7 @@ export function Typography() {
       <div className="w-full bg-white/5 rounded-xl border border-white/10 p-6 md:p-12 flex flex-col gap-10 overflow-hidden group">
         <div className="flex flex-col gap-4">
           <div className="flex justify-between items-center text-white/50 text-sm font-medium uppercase tracking-wider">
-            <span>Interactive Playground</span>
+            <span>type it out here</span>
             <span>Boxy-Regular.otf</span>
           </div>
           
