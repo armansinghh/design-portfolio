@@ -4,9 +4,9 @@ import { useRef } from "react";
 import { SectionHeading } from "./SectionHeading";
 
 const CLIPS = [
-  { src: "https://res.cloudinary.com/dpwepeiok/video/upload/v1787361758/clip-1_k7b90c.mp4" },
-  { src: "https://res.cloudinary.com/dpwepeiok/video/upload/v1787361729/clip-2_j0uwls.mp4" },
-  { src: "https://res.cloudinary.com/dpwepeiok/video/upload/v1787361794/clip-3_i74w3i.mp4" },
+  { src: "https://res.cloudinary.com/dpwepeiok/video/upload/v1787944159/1_wbopd9.mp4" },
+  { src: "https://res.cloudinary.com/dpwepeiok/video/upload/v1787944158/2_n3dsrz.mp4" },
+  { src: "https://res.cloudinary.com/dpwepeiok/video/upload/v1787944163/3_ztkncs.mp4" },
 ];
 
 export function MotionGraphics() {
