@@ -1,9 +1,11 @@
 # design.armansingh.me
 a portfolio site that doesn't feel like a portfolio site
 
-Live: **[design.armansingh.me](https://hefy.vercel.app)**
 
 ![Hero section screenshot](./public/preview.png)
+
+## try it
+[design.armansingh.me -->](https://hefy.vercel.app)
 
 
 ## what is it
@@ -59,6 +61,15 @@ styling's mostly tailwind v4, with a handful of hand rolled utility classes in g
 next.js (app router) + typescript, tailwind v4, framer motion, react three fiber + drei + postprocessing for the hero, lenis for scroll, resend for email.
 
 ## credits
-- custom display typeface (`Boxy-Regular.otf`) designed from scratch
-- pixel art game assets hand-drawn by me
-- motion clips + posters made for the geeksforgeeks mits chapter media team
+Stickers: [Sticker Maker](https://getstickerpack.com/)<br>
+Society Media: [ig/@gfgmits.official](https://instagram.com/gfgmits.official)<br>
+Fonts: [Google Fonts](https://fonts.google.com) - Bytesized, Elms Sans, Erica One<br>
+3D hero: [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) + [drei](https://github.com/pmndrs/drei) + [@react-three/postprocessing](https://github.com/pmndrs/react-postprocessing), env map HDR from [Poly Haven](https://polyhaven.com)<br>
+Animation: [Framer Motion](https://www.framer.com/motion/)<br>
+Scrolling: [Lenis](https://github.com/darkroomengineering/lenis) by [Darkroom Engineering](https://darkroom.engineering)<br>
+Icons: [react-icons](https://react-icons.github.io/react-icons/)<br>
+Video/image hosting: [Cloudinary](https://cloudinary.com)<br>
+Email: [Resend](https://resend.com)<br>
+Built with [Next.js](https://nextjs.org) + [Tailwind CSS](https://tailwindcss.com)<br>
+
+Built by [Arman Singh](https://armansingh.vercel.app)
