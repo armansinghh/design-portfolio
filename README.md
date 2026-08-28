@@ -1,74 +1,64 @@
-# Arman Singh - Motion & Design Portfolio
+# design.armansingh.me
+a portfolio site that doesn't feel like a portfolio site
 
-A scroll-driven portfolio site for a motion graphics & poster designer, built with Next.js, Framer Motion, and Three.js.
+Live: **[design.armansingh.me](https://hefy.vercel.app)**
 
 ![Hero section screenshot](./public/preview.png)
 
 
-**[→ View the live site](https://design.armansingh.me)**
+## what is it
+this is my design/motion portfolio, arman aka hefy. i do video edits, posters, motion graphics, a custom typeface, and some pixel art on the side, and i wanted a site that actually *felt* like that stuff instead of just a grid of images in a template. so everything scrolls, snaps, and wobbles a little more than a normal portfolio would.
 
-## Quick start
+the hero is a 3D tunnel of glass boxes flying at you (one `InstancedMesh`, not 1500 separate meshes, so it doesn't chug). scroll into the about section and there's a snake illustration that draws itself as you scroll, then hands off to its own little spring animation once you scroll past a point, and hands back if you scroll up again mid-animation. that handoff was way more annoying to get right than it has any business being.
 
+rest of the site is smooth scrolled with lenis, has its own drag to scroll scrollbar instead of the native one, and the project section splits into categories (posters, typography, motion, game assets, society work) each with a different way of showing itself off, hover for sound video previews, a live custom font typing demo, click to swap timelapses, etc.
+
+## quick start
 ```bash
 git clone <this-repo-url>
 cd <this-repo-folder>
 npm install
 npm run dev
 ```
+then open [http://localhost:3000](http://localhost:3000). that's it, everything runs fine with zero env vars, only the contact form submission needs the env stuff below.
 
-Then open [http://localhost:3000](http://localhost:3000).
+## features
+1. 3D animated hero tunnel (r3f + bloom postprocessing + camera follows your cursor a bit)
+2. scroll synced snake SVG in the about section that draws itself, then autoplays, then hands back to scroll if you reverse
+3. lenis smooth scrolling site-wide + a custom drag scrollbar
+4. project showcase split by category, each with its own interaction instead of a generic gallery
+5. contact form that fires a discord webhook AND a real email via resend at the same time, with inline bento grid validation
+6. custom floating nav with a staggered dropdown + a genuinely functional draggable zipper divider between sections
 
-## Features
-
-1. **3D animated hero**: an infinite tunnel of glass-like instanced boxes rendered with `@react-three/fiber`, with bloom post-processing and a subtle camera-follows-cursor effect
-2. **Scroll-synced snake illustration**: an SVG path that draws itself as you scroll through the About section, then hands off to a spring-based autoplay animation at the scroll boundary
-3. **Smooth, inertial scrolling** site-wide via Lenis, plus a custom drag-to-scroll scrollbar
-4. **Category-based project showcase**: posters, custom typography, motion graphics, hand-drawn 2D game assets, and college society promo work, each with its own interaction (hover-for-sound video previews, a live custom-font typing demo, click-to-swap timelapse videos)
-5. **Contact form** that fires off both a Discord webhook notification and a transactional email via Resend, with inline bento-grid style validation
-6. **Custom animated floating nav** with a staggered dropdown menu and a playful zipper-style section divider
-
-## Running locally
-
-Requirements:
-- Node.js 18+
-- npm (or your package manager of choice — no lockfile-specific tooling is assumed)
-
-Environment variables (create a `.env.local`):
-
+## running it with the contact form working
+you need a `.env.local`:
 ```
 RESEND_API_KEY=your_resend_api_key
 DISCORD_WEBHOOK_URL=your_discord_webhook_url
 CONTACT_EMAIL_FROM=you@yourdomain.com
 CONTACT_EMAIL_TO=you@yourdomain.com
 ```
+without these the whole site still runs fine, the contact form just won't actually send anything.
 
-These power `/api/contact`, which the Contact section posts to. Without them the rest of the site still runs fine — only the contact form submission will fail.
+requires node 18+, npm (no lockfile-specific tooling assumed).
 
 ```bash
-npm run dev      # start the dev server
-npm run build    # production build
+npm run dev      # dev server
+npm run build    # prod build
 npm run lint     # eslint
 ```
 
-## How it works
+## how it works
+the tunnel effect is one instanced mesh instead of 1500 separate boxes, each box just loops its z position through a fixed depth range every frame, keeps it at 60fps without the gpu caring how many "objects" are technically in the scene.
 
-The hero's tunnel effect is a single `InstancedMesh` of 1,500 boxes rather than 1,500 separate meshes, each box's position, scale, and z-depth loop through a fixed depth range every frame, which keeps the scene at 60fps without leaning on the GPU for draw calls it doesn't need.
+the snake was the fiddly part. it's scroll driven for the first ~55% of the about section, then hands off to a timed spring animation past that point, with debounced logic to bridge smoothly back to scroll if you reverse direction mid-animation. wanted it to feel alive on a fast scroll without janking on a slow deliberate one, took a few rewrites to land on something that didn't fight itself. (its still kinda broken, would be fixing soon)
 
-The About section's snake illustration is the more fiddly piece: it's driven by scroll for the first ~55% of the section, then "hands off" to a timed spring animation once the person scrolls past that point, with debounced logic to smoothly bridge back to scroll-driven control if they reverse direction mid-animation. The goal was to make the snake feel alive on fast scrolls without janking on slow, deliberate ones.
+styling's mostly tailwind v4, with a handful of hand rolled utility classes in globals.css for the grain/grid backgrounds and marquee keyframes since those don't map to utilities cleanly.
 
-Styling leans on Tailwind v4 (via `@tailwindcss/postcss`) with a small set of hand-rolled utility classes in `globals.css` for the grain/grid backgrounds and marquee keyframes, since those effects don't map cleanly to utility classes.
+## stack
+next.js (app router) + typescript, tailwind v4, framer motion, react three fiber + drei + postprocessing for the hero, lenis for scroll, resend for email.
 
-## Stack
-
-- [Next.js](https://nextjs.org/) (App Router) + TypeScript
-- [Tailwind CSS v4](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/) for UI animation
-- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) + [drei](https://github.com/pmndrs/drei) + `@react-three/postprocessing` for the 3D hero
-- [Lenis](https://github.com/darkroomengineering/lenis) for smooth scrolling
-- [Resend](https://resend.com/) for transactional email
-
-## Credits
-
-- Custom display typeface (`Boxy-Regular.otf`) designed from scratch
-- Pixel art game assets hand-drawn by the site's designer
-- Motion clips and posters produced for the GeeksforGeeks MITS chapter media team
+## credits
+- custom display typeface (`Boxy-Regular.otf`) designed from scratch
+- pixel art game assets hand-drawn by me
+- motion clips + posters made for the geeksforgeeks mits chapter media team
