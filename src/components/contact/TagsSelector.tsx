@@ -3,7 +3,13 @@
 import { motion } from "framer-motion";
 import { BentoCard } from "./BentoCard";
 
-const TAGS = ["...1", "...2", "...3", "...4", "Other"];
+const TAGS = [
+  "Video Editing",
+  "Poster Design",
+  "Motion Graphics",
+  "Web Dev",
+  "Other",
+];
 
 interface TagsSelectorProps {
   activeTag: string;
