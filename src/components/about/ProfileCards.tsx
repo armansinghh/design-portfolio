@@ -16,7 +16,9 @@ export function ProfileCardOne() {
         <img
           src="/assets/about/profile.jpg"
           alt="Arman"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover select-none"
+          draggable="false"
+          onContextMenu={(e) => e.preventDefault()}
         />
       </div>
 

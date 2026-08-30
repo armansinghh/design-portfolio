@@ -27,20 +27,23 @@ export function About() {
             src="/assets/about/mat.jpg"
             alt="Background Mat"
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 object-cover shadow-xl -rotate-2 z-0"
+            draggable="false"
           />
 
           <div className="relative z-10 w-full max-w-lg flex flex-col gap-4 justify-center md:justify-end">
-            <img
+            {/* <img
               src="/assets/about/sticker-2.webp"
               alt="Sticker"
               className="absolute -top-2 -left-6 w-25 h-25 z-10 rotate-6"
-            />
+              draggable="false"
+            /> */}
             <ProfileCardOne />
-            <img
+            {/* <img
               src="/assets/about/sticker-1.webp"
               alt="Sticker"
               className="absolute bottom-38 -right-12 w-30 h-30 z-10"
-            />
+              draggable="false"
+            /> */}
             <ProfileCardTwo />
           </div>
         </div>
